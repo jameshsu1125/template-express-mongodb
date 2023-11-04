@@ -1,12 +1,43 @@
 {
+  "name": "template-express-mongodb",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev --dir=public",
+    "deploy": "netlify deploy --dir=public",
+    "build": "browserify public/js/app.js -o public/js/main.js",
+    "watch": "watchify public/js/app.js -o public/js/main.js -v",
+    "rm": "rm -rf node_modules/ dist/ package-lock.json"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/preset-env"
+          ]
+        }
+      ]
+    ]
+  },
   "dependencies": {
     "@netlify/functions": "^2.3.0",
     "@types/express": "^4.17.20",
     "@types/node": "^18.18.8",
+    "browserify": "^17.0.0",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "lesca-fetcher": "^1.1.4",
     "mongoose": "^8.0.0",
     "serverless-http": "^3.2.0",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "watchify": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "babelify": "^10.0.0"
   }
 }

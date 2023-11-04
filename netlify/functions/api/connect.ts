@@ -5,7 +5,6 @@ import { Respond } from '../type';
 mongoose.set('strictQuery', true);
 
 const { DATABASE, URI } = process.env;
-
 const connect = () => {
   return new Promise<Respond>((resolve) => {
     if (mongoose.connections[0].readyState) {
