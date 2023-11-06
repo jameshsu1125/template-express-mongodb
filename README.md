@@ -37,6 +37,12 @@
 npm install netlify-cli -g
 ```
 
+- link netlify app [doc](https://docs.netlify.com/cli/get-started/#link-and-unlink-sites)
+
+```sh
+netlify link
+```
+
 - install module
 
 ```sh
