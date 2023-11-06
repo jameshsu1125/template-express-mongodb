@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "netlify dev --dir=public",
-    "dev": "concurrently \"npm run start\" \"npm run watch\"",
-    "deploy": "netlify deploy --dir=public",
+    "dev": "NODE_ENV=local concurrently \"npm run start\" \"npm run watch\"",
+    "deploy": "NODE_ENV=production netlify deploy --dir=public --prod",
     "build": "browserify src/app.js -o public/js/app.js",
     "watch": "watchify src/app.js -o public/js/app.js -v",
     "rm": "rm -rf node_modules/ dist/ package-lock.json"

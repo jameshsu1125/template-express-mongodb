@@ -11,7 +11,7 @@ const connect = () => {
       resolve({ res: true, msg: messages.connectConnected });
     } else {
       mongoose
-        .connect(`${URI}/${DATABASE}`)
+        .connect(`${URI}${DATABASE}`)
         .then(() => {
           resolve({ res: true, msg: messages.connectSuccess });
         })

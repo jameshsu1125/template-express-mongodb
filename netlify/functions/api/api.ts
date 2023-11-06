@@ -6,6 +6,8 @@ import insert from './insert';
 import deleteOne from './delete';
 import update from './update';
 
+require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` });
+
 const api = express();
 api.use(express.json());
 
