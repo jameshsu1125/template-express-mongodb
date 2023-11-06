@@ -31,6 +31,12 @@
 
 ## Quick start
 
+- install netlify-cli
+
+```sh
+npm install netlify-cli -g
+```
+
 - install module
 
 ```sh
