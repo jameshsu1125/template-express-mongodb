@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "netlify dev --dir=public",
+    "start": "netlify dev --dir=public",
+    "dev": "concurrently \"npm run start\" \"npm run watch\"",
     "deploy": "netlify deploy --dir=public",
-    "build": "browserify public/js/app.js -o public/js/main.js",
-    "watch": "watchify public/js/app.js -o public/js/main.js -v",
+    "build": "browserify src/app.js -o public/js/app.js",
+    "watch": "watchify src/app.js -o public/js/app.js -v",
     "rm": "rm -rf node_modules/ dist/ package-lock.json"
   },
   "browserify": {
@@ -38,6 +39,7 @@
   "devDependencies": {
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
-    "babelify": "^10.0.0"
+    "babelify": "^10.0.0",
+    "concurrently": "^8.2.2"
   }
 }

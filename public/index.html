@@ -1,10 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cupcake">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="js/main.js" defer type="module"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/app.js" defer type="module"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="w-full text-center flex flex-col space-y-1">
+      <div id="message" class="w-full bg-sky-500 p-5">mongodb connecting...</div>
+
+      <div id="select" class="w-full bg-fuchsia-500 p-5 space-y-4">
+        <div class="overflow-x-auto">
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>id</th>
+                <th>name</th>
+                <th>url</th>
+                <th>repo</th>
+                <th>description</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+        <button id="select-btn" class="btn" data-api="select">select</button>
+      </div>
+
+      <div id="insert" class="w-full bg-green-500 flex flex-col items-center py-5 space-y-4">
+        <div class="join">
+          <input class="input join-item" name="name" placeholder="name" />
+          <input class="input join-item" name="url" placeholder="url" />
+          <input class="input join-item" name="repo" placeholder="repo" />
+          <input class="input join-item" name="description" placeholder="description" />
+        </div>
+        <div>
+          <button id="insert-btn" class="btn" data-api="insert">insert</button>
+        </div>
+      </div>
+
+      <div id="update" class="w-full bg-indigo-500 flex flex-col items-center py-5 space-y-4">
+        <input class="input join-item" name="id" placeholder="id" />
+        <div class="join">
+          <input class="input join-item" name="name" placeholder="name" />
+          <input class="input join-item" name="url" placeholder="url" />
+          <input class="input join-item" name="repo" placeholder="repo" />
+          <input class="input join-item" name="description" placeholder="description" />
+        </div>
+        <div>
+          <button id="update-btn" class="btn" data-api="update">update</button>
+        </div>
+      </div>
+
+      <div id="delete" class="w-full bg-yellow-500 flex flex-col items-center py-5 space-y-4">
+        <input class="input" name="id" placeholder="id" />
+        <div>
+          <button id="delete-btn" class="btn" data-api="delete">delete</button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

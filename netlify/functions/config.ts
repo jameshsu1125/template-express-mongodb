@@ -8,4 +8,6 @@ export const messages = {
   insertError: '資料儲存失敗',
   deleteSuccess: '資料刪除成功',
   deleteError: '資料刪除失敗',
+  updateSuccess: '資料更新成功',
+  updateError: '資料更新失敗',
 };

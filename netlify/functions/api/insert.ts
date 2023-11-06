@@ -13,10 +13,10 @@ const insert = (data: Demo) => {
           .then((e: DemoID) => {
             resolve({ res: true, msg: messages.insertSuccess, data: [e] });
           })
-          .catch((e: any) => {
+          .catch((e: unknown) => {
             resolve({ res: false, msg: JSON.stringify(e) });
           });
-      } catch (e: any) {
+      } catch (e: unknown) {
         resolve({ res: false, msg: messages.insertError });
       }
     } else resolve({ res: false, msg: messages.insertError });
