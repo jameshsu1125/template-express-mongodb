@@ -37,12 +37,6 @@
 npm install netlify-cli -g
 ```
 
-- link netlify app [doc](https://docs.netlify.com/cli/get-started/#link-and-unlink-sites)
-
-```sh
-netlify link
-```
-
 - install module
 
 ```sh
@@ -70,6 +64,12 @@ $ npm run dev
 ```
 
 - deploy on `netlify`
+
+link netlify app [doc](https://docs.netlify.com/cli/get-started/#link-and-unlink-sites)
+
+```sh
+netlify link
+```
 
 set environment variables same as `.env.local`.
 
