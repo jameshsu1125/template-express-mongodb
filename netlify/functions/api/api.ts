@@ -16,31 +16,26 @@ api.use(express.json());
 const router = Router();
 router.get('/connect', async (_, res) => {
   const respond = await connect();
-  res.set({ 'access-control-allow-origin': '*' });
   res.status(200).json(respond);
 });
 
 router.post('/select', async (_, res) => {
   const respond = await select();
-  res.set({ 'access-control-allow-origin': '*' });
   res.status(200).json(respond);
 });
 
 router.post('/insert', async (req, res) => {
   const respond = await insert(req.body);
-  res.set({ 'access-control-allow-origin': '*' });
   res.status(200).json(respond);
 });
 
 router.post('/delete', async (req, res) => {
   const respond = await deleteOne(req.body);
-  res.set({ 'access-control-allow-origin': '*' });
   res.status(200).json(respond);
 });
 
 router.post('/update', async (req, res) => {
   const respond = await update(req.body);
-  res.set({ 'access-control-allow-origin': '*' });
   res.status(200).json(respond);
 });
 
