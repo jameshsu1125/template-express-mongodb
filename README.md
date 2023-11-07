@@ -1,11 +1,9 @@
 [![NPM](https://img.shields.io/badge/NPM-ba443f?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/)
-[![EXPRESS](https://img.shields.io/badge/express-%23404d59?style=for-the-badge&logo=express&logoColor=white)](https://www.npmjs.com/)
+[![EXPRESS](https://img.shields.io/badge/express-%23404d59?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
 [![NODE](https://img.shields.io/badge/Node-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/)
-[![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://zh-hant.reactjs.org/)
 [![TS](https://img.shields.io/badge/Typescript-4277c0?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![LESS](https://img.shields.io/badge/Less-1d365d?style=for-the-badge&logo=less&logoColor=white)](https://lesscss.org/)
-[![TW](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=npm&logoColor=white)](https://lesscss.org/)
-[![ROUTER](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=npm&logoColor=white)](https://lesscss.org/)
+[![TW](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=npm&logoColor=white)](https://tailwindcss.com/)
+[![NETLIFY](https://img.shields.io/badge/netlify-%23000000?style=for-the-badge&logo=netlify&logoColor=white)](https://www.netlify.com/)
 
 <p align="center">
   <a href="https://github.com/jameshsu1125">
