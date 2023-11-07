@@ -1,14 +1,16 @@
 import express, { Router } from 'express';
 import serverless from 'serverless-http';
 import connect from './connect';
-import select from './select';
-import insert from './insert';
 import deleteOne from './delete';
+import insert from './insert';
+import select from './select';
 import update from './update';
+import cors from 'cors';
 
 require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` });
 
 const api = express();
+api.use(cors({ origin: '*' }));
 api.use(express.json());
 
 const router = Router();
@@ -31,13 +33,13 @@ router.post('/insert', async (req, res) => {
 });
 
 router.post('/delete', async (req, res) => {
-  const respond = await insert(req.body);
+  const respond = await deleteOne(req.body);
   res.set({ 'access-control-allow-origin': '*' });
   res.status(200).json(respond);
 });
 
 router.post('/update', async (req, res) => {
-  const respond = await insert(req.body);
+  const respond = await update(req.body);
   res.set({ 'access-control-allow-origin': '*' });
   res.status(200).json(respond);
 });
