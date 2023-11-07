@@ -2,7 +2,6 @@ import mongoose from 'mongoose';
 import { messages } from '../config';
 import { table } from '../models';
 import { Respond } from '../type';
-import { log } from 'console';
 
 const select = () => {
   return new Promise<Respond>((resolve) => {
