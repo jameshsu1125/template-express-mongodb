@@ -30,7 +30,7 @@
 
 ## Quick start
 
-- install netlify-cli
+- install netlify-cli globally
 
 ```sh
 npm install netlify-cli -g
